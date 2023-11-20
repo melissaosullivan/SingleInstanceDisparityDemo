@@ -20,11 +20,11 @@
   </com.google.android.material.appbar.AppBarLayout>
 
   <Button
-    android:id="@+id/launchSecondActivityButton"
+    android:id="@+id/launchCustomTabButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:text="Launch SecondActivity"
+    android:text="Launch Custom Tab"
     />
 
   <com.google.android.material.floatingactionbutton.FloatingActionButton

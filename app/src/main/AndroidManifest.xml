@@ -15,7 +15,8 @@
     <activity
       android:name=".MainActivity"
       android:exported="true"
-      android:label="@string/app_name"
+      android:label="Main Activity"
+      android:launchMode="singleInstance"
       android:theme="@style/Theme.SingleInstanceDisparityDemo">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
@@ -23,6 +24,26 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-  </application>
+    <activity
+      android:name=".SecondActivity"
+      android:label="Second Activity"
+      android:launchMode="singleTask"
+      android:theme="@style/Theme.SingleInstanceDisparityDemo"/>
+    <activity
+      android:name=".RedirectActivity"
+      android:theme="@style/Theme.SingleInstanceDisparityDemo"
+      android:exported="true">
 
+    <intent-filter>
+      <action android:name="android.intent.action.VIEW" />
+
+      <category android:name="android.intent.category.DEFAULT" />
+      <category android:name="android.intent.category.BROWSABLE" />
+
+      <data
+        android:host="redirect"
+        android:scheme="single_instance_disparity_demo" />
+    </intent-filter>
+    </activity>
+  </application>
 </manifest>
