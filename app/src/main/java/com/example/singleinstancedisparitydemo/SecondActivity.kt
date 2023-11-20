@@ -41,9 +41,10 @@ class SecondActivity : AppCompatActivity() {
 
     binding.launchCustomTabButton.setOnClickListener { view ->
       val url = "https://suave-clear-pan.glitch.me/"
-      val intent = CustomTabsIntent.Builder()
+      /*val intent = CustomTabsIntent.Builder()
         .build()
-      intent.launchUrl(this@SecondActivity, Uri.parse(url))
+      intent.launchUrl(this@SecondActivity, Uri.parse(url))*/
+      startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
     }
   }
 }
